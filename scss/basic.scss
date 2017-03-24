@@ -1,0 +1,208 @@
+@import "compass/css3";
+
+$icon-font-path: "../assets/fonts/bootstrap/" !default;
+$brand-primary: #00c0ff !default;
+$navbar-default-color: #fff !default;
+$navbar-default-link-color: #fff !default;
+$navbar-default-link-active-color: #00c0ff !default;
+$navbar-default-link-hover-color: #00c0ff !default;
+$navbar-default-link-active-bg: #dcdcdc !default;
+$navbar-default-link-hover-bg: #dcdcdc !default;
+$index-first-container-height: 600px !default;
+$navbar-collapse-max-height: 600px !default;
+
+// Navbar brand label
+$navbar-default-brand-color: #00c0ff !default;
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+html, body {
+  overflow-x: hidden;
+}
+
+a {
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &.learn-more {
+    color: #666;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+.container, .container-fluid {
+  text-align: center;
+  padding-bottom: 0px;
+  .title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    border-bottom: 1px solid rgba(30, 45, 85, .6);
+    span {
+      display: inline-block;
+      margin: 0 auto;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      background: rgba(30, 45, 85, .6);
+    }
+  }
+
+}
+
+.container {
+  padding: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.top-container {
+  div.top-logo {
+    background: rgb(30, 45, 85);
+    height: 100px;
+    text-align: left;
+    img {
+      height: 100px;
+
+    }
+  }
+  .navbar.navbar-default {
+    height: 30px;
+    min-height: 30px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    background: rgba(30, 45, 85, .6);
+    color: white;
+    .navbar-left {
+      .navbar-nav > li > a {
+        padding: 5px 15px;
+      }
+      .navbar-nav .dropdown-menu {
+        background: rgba(30, 45, 85, .6);
+        > li {
+          > a {
+            color: white;
+            &:hover, &.active {
+              background: $navbar-default-link-active-bg;
+              color: $brand-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .top-image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+h3, .h3 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  height: 80px;
+  p {
+    background: #d2d2d2;
+    color: #5e5e5e;
+    line-height: 80px;
+  }
+}
+
+#index {
+  .first-container {
+    img {
+      width: 100%;
+    }
+  }
+  .second-container {
+    .content {
+      padding-top: 100px;
+      color: white;
+      text-align: left;
+      background: url("../assets/images/index/second/bg.jpg") no-repeat center;
+      background-size: cover;
+      height: 500px;
+      .col {
+        img {
+          width: 100%;
+          height: 200px;
+        }
+        p.date {
+          margin-top: 20px;
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+}
+
+#aboutus,#cefc,#dual,#tef,#publication {
+  .first-container {
+    .content {
+      text-align: left;
+      h4 {
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#cefc {
+  .first-container {
+    img {
+      width: 80%
+    }
+  }
+}
+#dual,#tef {
+  .first-container {
+    img {
+      height: 160px;
+      margin-right: 20px;
+      &.bottom{
+        width: auto;
+        display: block;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+#contact{
+  .first-container{
+    .content{
+      text-align: left;
+      height: 300px;
+      padding-top: 30px;
+      background: url("../assets/images/contact/contactus-bg.jpg") no-repeat center;
+      background-size: cover;
+      ul{
+        float: right;
+        list-style: none;
+        margin-right: 30px;
+        a{
+          color: black;
+          &:hover{
+            color: $brand-primary;
+          }
+        }
+      }
+    }
+  }
+}
