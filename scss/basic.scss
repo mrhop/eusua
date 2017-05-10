@@ -19,6 +19,10 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 a {
 
   &:hover {
@@ -48,6 +52,7 @@ a {
       height: 50px;
       line-height: 50px;
       padding: 0 20px;
+      width: 180px;
       background: rgba(30, 45, 85, .6);
     }
   }
@@ -151,10 +156,40 @@ h3, .h3 {
 
 }
 
-#aboutus,#cefc,#dual,#tef,#publication {
+#aboutus, #mission, #team, #whyus, #cefc, #dual, #tef, #ctc, #publication {
   .first-container {
+    ul.left-menu {
+      float: left;
+      width: 180px;
+      margin: -15px 0 0;
+      list-style: none;
+      text-align: left;
+      padding-left: 0px;
+      background: rgba(30, 45, 85, 0.6);
+      min-height: 500px;
+      li {
+        padding-left: 0px;
+        a {
+          display: block;
+          width: 100%;
+          padding: 0px 0 0 20px;
+          font-size: 14px;
+          line-height: 2;
+          color: #fff;
+          &:hover {
+            color: $brand-primary;
+          }
+        }
+        &.active {
+          a {
+            color: $brand-primary;
+          }
+        }
+      }
+    }
     .content {
       text-align: left;
+      margin-left: 200px;
       h4 {
         font-weight: bold;
         font-size: 14px;
@@ -170,12 +205,13 @@ h3, .h3 {
     }
   }
 }
-#dual,#tef {
+
+#dual, #tef {
   .first-container {
     img {
       height: 160px;
       margin-right: 20px;
-      &.bottom{
+      &.bottom {
         width: auto;
         display: block;
         height: auto;
@@ -184,21 +220,22 @@ h3, .h3 {
     }
   }
 }
-#contact{
-  .first-container{
-    .content{
+
+#contact {
+  .first-container {
+    .content {
       text-align: left;
       height: 300px;
       padding-top: 30px;
       background: url("../assets/images/contact/contactus-bg.jpg") no-repeat center;
       background-size: cover;
-      ul{
+      ul {
         float: right;
         list-style: none;
         margin-right: 30px;
-        a{
+        a {
           color: black;
-          &:hover{
+          &:hover {
             color: $brand-primary;
           }
         }
