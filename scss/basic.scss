@@ -158,15 +158,21 @@ h3, .h3 {
 
 #aboutus, #mission, #team, #whyus, #cefc, #dual, #tef, #ctc, #publication {
   .first-container {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
     ul.left-menu {
-      float: left;
+      position: absolute;
+      //float: left;
       width: 180px;
-      margin: -15px 0 0;
+      left: 0;
+      top: 85px;
+      //margin: -15px 0 0;
       list-style: none;
       text-align: left;
       padding-left: 0px;
       background: rgba(30, 45, 85, 0.6);
-      min-height: 500px;
+      height: 100%;
       li {
         padding-left: 0px;
         a {
@@ -237,6 +243,78 @@ h3, .h3 {
           color: black;
           &:hover {
             color: $brand-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+#team {
+  .first-container {
+    .content {
+      > ul {
+        list-style: none;
+        overflow: hidden;
+        padding-left: 0;
+        > li {
+          float: left;
+          border-radius: 3px;
+          display: inline-block;
+          width: 23%;
+          @media (max-width: $screen-md-max) {
+            width: 31%;
+          }
+          @media (max-width: $screen-sm-max) {
+            width: 48%;
+          }
+          @media (max-width: $screen-xs-max) {
+            width: 98%;
+          }
+          vertical-align: top;
+          text-align: center;
+          padding: 10px 0 0;
+          margin: 0 1% 10px;
+          background: rgba(30, 45, 85, 0.5);
+          @include transition(all .3s);
+          &:hover {
+            background: rgba(30, 45, 85, 0.6);
+          }
+          > img {
+            width: 60%;
+          }
+          p {
+            background: white;
+            padding: 5px 0px;
+            display: block;
+            font-weight: bold;
+            width: 80%;
+            margin: 20px auto;
+            display: block;
+            &.name {
+              color: #811c21;
+              height: 48px;
+              position: relative;
+              span {
+                display: block;
+                top: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                width: 100%;
+              }
+            }
+          }
+          ul {
+            background: #fff;
+            color: #666;
+            list-style: disc;
+            width: 80%;
+            margin: 0 auto;
+            padding: 5px 5px 5px 30px;
+            text-align: left;
+            font-size: 12px;
+            height: 350px;
+            overflow: hidden;
           }
         }
       }
